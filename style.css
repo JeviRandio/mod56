@@ -1,0 +1,122 @@
+@font-face {
+	font-family: montserrat;
+	src: url(fonts/montserrat.ttf);
+}
+@font-face {
+	font-family: grunge;
+	src: url(fonts/grunge.ttf);
+}
+
+body {
+	background-attachment: fixed;
+	background-image: linear-gradient(120deg, #333, #555);
+	color: white;
+	font-family: montserrat;
+}
+
+#heading {
+	position: relative;
+}
+
+.grungeText {
+	font-family: grunge;
+	position: absolute;
+	width: max-content;
+	right: 5%;
+	top: -15%;
+	rotate: 7deg;
+}
+
+@media (min-width: 950px) {
+	.grungeText {
+		font-size: 25px !important;
+		right: 12%;
+	}
+	.mx-4 {
+		margin-left: 15vw !important;
+		margin-right: 15vw !important;
+	}
+}
+
+.mt-10 {
+	margin-top: 10vh !important;
+}
+
+.card-container {
+    display: flex;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+.card {
+    flex: 1;
+    height: 350px;
+    transition: flex 0.4s ease-in-out, transform 0.3s ease, filter 0.2s 0.3s;
+    overflow: hidden;
+	border-radius: 0 0 20px 20px;
+	box-shadow: 0px 6px 8px black;
+}
+
+.card:hover {
+    flex: 2;
+	cursor: pointer;
+}
+
+.card-container:has(.card:hover) .card:not(:hover) {
+    flex: 1;
+	filter: brightness(40%);
+}
+		
+.card-img-top {
+	min-height: 270px;
+    max-height: 270px;
+    object-fit: cover;
+    object-position: center;
+	border-radius: none;
+}
+		
+.card-body {
+	padding: 0px;
+}
+
+.card-title {
+	height: 70px;
+	margin-left: 50%;
+	transform: translateX(-50%);
+	transition: opacity 0.3s ease 0.3s;
+}
+
+.card .preview-text {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 1vw;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.1s, visibility 0s linear 0.3s;
+}
+
+.card:hover .preview-text{
+    opacity: 1;
+    visibility: visible;
+	transition: opacity 0.3s ease 0.5s, visibility 0s linear;
+}
+
+.card:hover .card-title {
+	opacity: 0;
+	transition: opacity 0.3s linear 0.5s;
+}
+
+#floor {
+	position: fixed;
+	z-index: -1;
+	width: 100vw;
+	height: 100px;
+	margin-top: -50px;
+	background-image: linear-gradient(90deg, rgb(64,12,12), rgb(97,56,56), rgb(64,12,12));
+}
