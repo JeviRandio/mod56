@@ -18,35 +18,35 @@
 	</div>
 	<div class="container-fluid mt-4">
         <div class="card-container mx-5">
-            <div class="card bg-dark">
+            <div class="card bg-dark" data-bs-toggle="modal" data-bs-target="#myModal" data-mode="jollibee">
                 <div><img src="images/preview_jollibee.png" class="card-img-top" alt="..."></div>
                 <div class="card-body">
                     <img class="card-title " src="images/text_jollibee.png">
 					<div class="preview-text px-3">The crispy, juicy, and flavorful Chickenjoy that Filipinos can’t get enough of. <br><i>Click to preview more.</i></div>
                 </div>
             </div>
-            <div class="card bg-dark">
+            <div class="card bg-dark" data-bs-toggle="modal" data-bs-target="#myModal" data-mode="mcdonalds">
                 <img src="images/preview_mcdonalds.png" class="card-img-top" alt="...">
                 <div class="card-body">
                     <img class="card-title " src="images/text_mcdonalds.png">
 					<div class="preview-text px-3">Classic, tender, and well-seasoned fried chicken with a signature gravy twist.<br><i>Click to preview more.</i></div>
                 </div>
             </div>
-            <div class="card bg-dark">
+            <div class="card bg-dark" data-bs-toggle="modal" data-bs-target="#myModal" data-mode="kfc">
                 <img src="images/preview_kfc.png" class="card-img-top" alt="...">
                 <div class="card-body">
                     <img class="card-title" src="images/text_kfc.png">
 					<div class="preview-text px-3">The world-famous 11-spice crispy chicken that’s crunchy outside and juicy inside.<br><i>Click to preview more.</i></div>
                 </div>
             </div>
-			<div class="card bg-dark">
+			<div class="card bg-dark" data-bs-toggle="modal" data-bs-target="#myModal" data-mode="chowking">
                 <img src="images/preview_chowking.png" class="card-img-top" alt="...">
                 <div class="card-body">
                     <img class="card-title " src="images/text_chowking.png">
 					<div class="preview-text px-3">Chinese-style fried chicken with a light, crispy skin and savory taste.<br><i>Click to preview more.</i></div>
                 </div>
             </div>
-			<div class="card bg-dark">
+			<div class="card bg-dark" data-bs-toggle="modal" data-bs-target="#myModal" data-mode="manginasal">
                 <img src="images/preview_manginasal.png" class="card-img-top" alt="...">
                 <div class="card-body">
                     <img class="card-title " src="images/text_manginasal.png">
@@ -58,7 +58,24 @@
 
 	<div id="floor"></div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+	<div class="modal fade" id="myModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content bg-dark">
+				<div class="modal-header">
+					<img src="images/text_manginasal.png">
+				</div>
+				<div class="modal-body">
+					<img id="modalImage">
+					<p id="description"></p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<button type="button" data-bs-dismiss="modal" onclick="closeModal()" class="btn btn-dark fs-5" id="closer">Main Menu</button>
+    
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 	<script src="bootstraps/script.js"></script>
+	<script src="script.js"></script>
 </body>
 </html>
